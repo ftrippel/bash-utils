@@ -63,7 +63,8 @@ $CMD &
 disown %1
 ```
 
-### If the command fails, send an email with the it's output
+### If the command CMD fails, send an email
 ```bash
-$CMD || mail -s $SUBJECT $MAIL_ADDR
+TMP=`mktemp /tmp/temporary-file.XXXXX`
+($CMD | tee $TMP) || (cat $TMP | mail -s $SUBJECT $MAIL_TO)
 ```
