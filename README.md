@@ -9,11 +9,11 @@ For instance, for my diploma thesis I had to run some R program in parallel. I c
 
 # Idioms
 
-For the sake of documentation (as I am quite forgetful) and for sharing with bash novices, I am going to jot down some bash idioms that proved quite useful. 
+For the sake of documentation (as I am quite forgetful) and for sharing with _bash novices_, I am going to jot down some bash idioms that I find quite useful.
 
 ## Working with files
 
-### Strip directory, filebasename and fileextension from an absolute path to a file
+### Strip directory, file basename and extension from an absolute file path
 
 ```bash
 FILE_PATH=/a/b/filename.ext
@@ -50,7 +50,7 @@ fi
 ## Working with processes
 
 ### Execute a series of commands as particular user including root
-As this will launch a login shell, it will feel most naturally, since all environment variables you are accustomed to will be present
+As this will launch a login shell, it will feel most natural, since all environment variables you are accustomed to will be present
 ```bash
 sudo su --login $USER -s /bin/bash <<EOF
 ...
@@ -63,7 +63,7 @@ $CMD &
 disown %1
 ```
 
-# If the job fails, send an email with the job's output
+### If the command fails, send an email with the it's output
 ```bash
 $CMD || mail -s $SUBJECT $MAIL_ADDR
 ```
