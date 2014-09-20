@@ -70,10 +70,10 @@ function wait_processes()
 				wait $pid &>/dev/null
 				local exitstatus=$?
 				if [ "$debug" == "1" ]; then
-					echo "\"${cmds[$i]}\" with pid $pid exited with status ${exitstatus}"
+					echo "\"${cmds[$i]}\" with pid ${pid} exited with status ${exitstatus}"
 				fi
 				if [ "$on_process_complete" != "" ]; then
-					$on_process_complete "${cmds[$i]}" "${pids[$i]}" "${exitstatus}"
+					$on_process_complete "${cmds[$i]}" "${pid}" "${exitstatus}"
 				fi
 				unset cmds[$i]
 				unset pids[$i]
