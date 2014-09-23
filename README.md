@@ -10,6 +10,10 @@ Just to get things straight, I am not a fan of bash scripts and I would resort t
 <dl>
   <dt>process.sh</dt>
   <dd>A bash framework for running processes.</dd>
+  <dt>process_example.sh</dt>
+  <dd>Runs a total number of N processes and M(<=N) in parallel.</dd>
+  <dt>common.sh</dt>
+  <dd>Some utility functions I often use.</dd>
 </dl>
 
 # Idioms
