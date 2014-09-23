@@ -17,10 +17,10 @@ For the sake of documentation (as I am quite forgetful) and for sharing with _ba
 
 ```bash
 FILE_PATH=/a/b/filename.ext
-DIRECTORY=$(dirname $FILE_PATH) # yiels /a/b
-FILENAME=$(basename $FILE_PATH) # yields filename.ext
-FILEBASENAME=${FILENAME%.*} # yields filename
-FILEEXT=${FILENAME##*.} -> ext
+DIRECTORY=$(dirname $FILE_PATH) # yiels "/a/b"
+FILENAME=$(basename $FILE_PATH) # yields "filename.ext"
+FILEBASENAME=${FILENAME%.*} # yields "filename"
+FILEEXT=${FILENAME##*.} -> # yields "ext"
 ```
 
 ### Determine the file owner
